@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
+@import "primeicons/primeicons.css";
+
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  margin: 0;
+  font-family: "Fira Code", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+app-root {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  padding-left: 3rem;
+  padding-right: 3rem;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.header {
+  color: #ffffff;
+  background-color: #09090b;
+  user-select: none;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+  width: 100%;
+  margin-top: 10rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+
+  .container {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+}
+
+.footer {
+  display: flex;
+  margin-top: auto;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #f8fafc;
+  text-align: center;
+
+  p {
+    font-size: 0.85rem;
+  }
+
+  .footer-elements {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+
+    .footer-element {
+      margin: auto;
+    }
+  }
+}
+
+.card {
+  width: 100%;
+  margin: auto;
+}
+
+.form {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  justify-content: center;
+}
+
+textarea {
+  min-width: 100%;
+  max-width: 100%;
+  resize: vertical;
+  font-family: "Consolas", monospace !important;
+}
+
+.p-textarea {
+  font-size: 0.9rem !important;
+}
+
+.btn-format {
+  margin: auto;
+  width: 100%;
+
+  button {
+    width: 100%;
+  }
+}
+
+.pre {
+  background-color: #f3f4f6;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  overflow: auto;
+}
+
+.pre-container {
+  position: relative;
+
+  i {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+  }
+
+  i:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px; /* Small devices (≥ 576px) */
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px; /* Medium devices (≥ 768px) */
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px; /* Large devices (≥ 992px) */
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px; /* Extra-large devices (≥ 1200px) */
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px; /* Extra-extra-large devices (≥ 1400px) */
+  }
+}

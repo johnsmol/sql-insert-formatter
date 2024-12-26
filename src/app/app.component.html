@@ -1,0 +1,59 @@
+<!-- header -->
+<header class="header">
+  <div class="container">
+    <h2>SIF | SQL Insert Formatter</h2>
+  </div>
+</header>
+
+<!-- main -->
+<main class="main">
+  <div class="container">
+    <p-toast position="bottom-right"/>
+    <p-card header="SQL Insert Formatter" class="card">
+      <div class="textarea-container">
+        <form [formGroup]="formGroup" class="form">
+        <textarea
+          pTextarea
+          autoResize="false"
+          rows="{{txtAreaRows}}"
+          maxlength="{{txtAreaMaxLength}}"
+          placeholder="{{txtAreaPlaceholder}}"
+          formControlName="sqlInput">
+        </textarea>
+          <p-button (click)="formatSql()" class="btn-format">Format SQL</p-button>
+        </form>
+      </div>
+      <div class="pre-container">
+        <pre id="formattedSql" class="pre">{{ formattedSql }}</pre>
+        @if (formattedSql != '') {
+          <i class="pi pi-clipboard" (click)="copyToClipboard()"></i>
+        }
+      </div>
+    </p-card>
+  </div>
+</main>
+
+<!-- footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-elements">
+      <div class="footer-element">
+        <p>&copy;{{ currentYear }} SIF</p>
+      </div>
+      <div class="footer-element">
+        <p>
+          <a href="https://opensource.org/licenses/MIT" target="_blank" rel="noopener noreferrer">
+            MIT License
+          </a>
+        </p>
+      </div>
+      <div class="footer-element">
+        <p>
+          <a href="https://github.com/johnsmol/sql-insert-formatter" target="_blank" rel="noopener noreferrer">
+            <i class="pi pi-github"></i>
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
